@@ -3071,6 +3071,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1114857001}
     m_Modifications:
+    - target: {fileID: 109800000958019463, guid: 776632fc95f34c0438dd6ffb78bd711f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 1912433056628968991, guid: 776632fc95f34c0438dd6ffb78bd711f, type: 3}
       propertyPath: m_Name
       value: TestPlanet
