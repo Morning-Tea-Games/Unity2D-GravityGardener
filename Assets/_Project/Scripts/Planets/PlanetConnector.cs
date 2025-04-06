@@ -4,6 +4,8 @@ namespace Planets
 {
     public class PlanetConnector : MonoBehaviour
     {
+        [SerializeField] private float _addSizeModifier;
+
         private PlanetBuffer _buffer;
 
         private void Start()
@@ -19,12 +21,12 @@ namespace Planets
             Planet main;
             Planet target;
 
-            if (a.Collider.radius < b.Collider.radius)
+            if (a.transform.localScale.y < b.transform.localScale.y)
             {
                 main = b;
                 target = a;
             }
-            else if (a.Collider.radius > b.Collider.radius)
+            else if (a.transform.localScale.y > b.transform.localScale.y)
             {
                 main = a;
                 target = b;
@@ -35,7 +37,8 @@ namespace Planets
                 target = main == a ? b : a;
             }
 
-            main.Add(target.Layers, 1);
+            main.Add(target.Layers, b.transform.localScale * _addSizeModifier);
+            Destroy(target.gameObject);
         }
     }
 }

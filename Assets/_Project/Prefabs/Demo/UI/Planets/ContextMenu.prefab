@@ -655,6 +655,7 @@ GameObject:
   - component: {fileID: 9043400947817046916}
   - component: {fileID: 3893202506067518195}
   - component: {fileID: 3438800268721384097}
+  - component: {fileID: 7896476278825246694}
   m_Layer: 0
   m_Name: ContextMenu
   m_TagString: Untagged
@@ -725,6 +726,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7896476278825246694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966299419502392904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7882ad20a6e554a48bfb596896147a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _informationButton: {fileID: 3790602385360936404}
+  _moveButton: {fileID: 4121849454704131985}
+  _compositButton: {fileID: 7235733387329686999}
+  _destroyButton: {fileID: 2672526848608002810}
+  _planet: {fileID: 0}
+  _connector: {fileID: 0}
 --- !u!1 &6227951050300230004
 GameObject:
   m_ObjectHideFlags: 0

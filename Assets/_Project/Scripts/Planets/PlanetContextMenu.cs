@@ -6,13 +6,14 @@ namespace Planets
 {
     public class PlanetContextMenu : MonoBehaviour
     {
+        public bool WaitingConnect;
+
         [SerializeField] private Button _informationButton;
         [SerializeField] private Button _moveButton;
         [SerializeField] private Button _compositButton;
         [SerializeField] private Button _destroyButton;
 
-        [SerializeField] private Planet _planet;
-        [SerializeField] private PlanetConnector _connector;
+        private Planet _target;
 
         private void OnEnable()
         {
@@ -29,6 +30,16 @@ namespace Planets
             _compositButton.onClick.RemoveListener(OnCompositButtonClicked);
             _destroyButton.onClick.RemoveListener(OnDestroyButtonClicked);
         }
+
+        public void SetTarget(Planet target)
+        {
+            _target = target;
+        }
+
+        public void SetActiveCompositButton(bool active)
+        {
+            _compositButton.interactable = active;
+        }
         
         private void OnMoveButtonClicked()
         {
@@ -37,12 +48,15 @@ namespace Planets
 
         private void OnCompositButtonClicked()
         {
-            _connector.Connect();
+            SetActiveCompositButton(false);
+            WaitingConnect = true;
+            gameObject.SetActive(false);
         }
 
         private void OnDestroyButtonClicked()
         {
-            Destroy(_planet.gameObject);
+            Destroy(_target.gameObject);
+            gameObject.SetActive(false);
         }
 
         private void OnInformationButtonClicked()

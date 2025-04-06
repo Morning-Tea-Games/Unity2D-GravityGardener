@@ -1,3 +1,6 @@
+// 4. Сделать через выбор первой планеты ко второй
+// 1. Подогнать размер планет под референс
+
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,31 +9,29 @@ namespace Planets
 {
     public class Planet : MonoBehaviour
     {
-        [field: SerializeField] public CircleCollider2D Collider { get; private set; }
         [field: SerializeField] public List<LayerView> Layers { get; private set; }
 
         [SerializeField] private List<PlanetLayerConflictSO> _conflicts;
+        [SerializeField] private PlanetSizeSO _maxSizes;
 
-        public void Add(List<LayerView> layers, float sizeRatio)
+        private PlanetType _currentType;
+
+        private void Start()
         {
-            for (int i = 0; i < Layers.Count; i++)
+            DefineType();
+        }
+
+        public void Add(List<LayerView> layers, Vector3 sizeRatio)
+        {
+            for(int i = 0; i < Layers.Count; i++)
             {
-                if (Layers[i].CurrentIntensity == LayerIntensity.None)
-                {
-                    continue;
-                }
-
-                if (Layers[i] == layers[i] && Layers[i].CurrentIntensity <= LayerIntensity.High)
-                {
-                    Layers[i].Activate(layers[i].CurrentIntensity + 1);
-                }
-                else
-                {
-                    Layers[i].Activate(layers[i].CurrentIntensity);
-                }
-
-                FixConflict();
+                if (Layers[i].CurrentIntensity == LayerIntensity.None && layers[i].CurrentIntensity == LayerIntensity.None) continue;
+                Layers[i].Activate(Layers[i].CurrentIntensity + (int)layers[i].CurrentIntensity);
             }
+
+            transform.localScale += sizeRatio;
+            FixConflict();
+            DefineType();
         }
 
         public void FixConflict()
@@ -63,6 +64,24 @@ namespace Planets
                     aView.Activate(LayerIntensity.None);
                 }
             }
+        }
+
+        private void DefineType()
+        {
+            var size = transform.localScale.y;
+
+            for (int i = 0; i < _maxSizes.Configuration.Length; i++)
+            {
+                if (size > _maxSizes.Configuration[i].MaxSize)
+                {
+                    continue;
+                }
+
+                _currentType = _maxSizes.Configuration[i].Type;
+                return;
+            }
+
+            throw new System.Exception($"There was no planet with the right size");
         }
     }
 }
