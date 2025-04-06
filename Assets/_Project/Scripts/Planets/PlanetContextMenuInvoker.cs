@@ -7,6 +7,7 @@ namespace Planets
     public class PlanetContextMenuInvoker : MonoBehaviour
     {
         [SerializeField] private GameObject _contextMenuObject;
+        [SerializeField] private Planet _target;
 
         private void Awake()
         {
@@ -25,6 +26,9 @@ namespace Planets
                     if (hit.collider.TryGetComponent<Planet>(out var _))
                     {
                         _contextMenuObject.SetActive(true);
+                        PlanetBuffer.Instance.SetA(_target);
+                        PlanetBuffer.Instance.SetB(_target);
+
                     }
                 }
             }

@@ -12,6 +12,7 @@ namespace Planets
         [SerializeField] private Button _destroyButton;
 
         [SerializeField] private Planet _planet;
+        [SerializeField] private PlanetConnector _connector;
 
         private void OnEnable()
         {
@@ -36,7 +37,7 @@ namespace Planets
 
         private void OnCompositButtonClicked()
         {
-            throw new NotImplementedException();
+            _connector.Connect();
         }
 
         private void OnDestroyButtonClicked()

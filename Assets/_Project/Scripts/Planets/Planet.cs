@@ -6,15 +6,39 @@ namespace Planets
 {
     public class Planet : MonoBehaviour
     {
-        [SerializeField] private List<LayerView> _layers;
+        [field: SerializeField] public CircleCollider2D Collider { get; private set; }
+        [field: SerializeField] public List<LayerView> Layers { get; private set; }
+
         [SerializeField] private List<PlanetLayerConflictSO> _conflicts;
+
+        public void Add(List<LayerView> layers, float sizeRatio)
+        {
+            for (int i = 0; i < Layers.Count; i++)
+            {
+                if (Layers[i].CurrentIntensity == LayerIntensity.None)
+                {
+                    continue;
+                }
+
+                if (Layers[i] == layers[i] && Layers[i].CurrentIntensity <= LayerIntensity.High)
+                {
+                    Layers[i].Activate(layers[i].CurrentIntensity + 1);
+                }
+                else
+                {
+                    Layers[i].Activate(layers[i].CurrentIntensity);
+                }
+
+                FixConflict();
+            }
+        }
 
         public void FixConflict()
         {
             foreach (var conflict in _conflicts)
             {
-                var aView = _layers.FirstOrDefault(l => l.Layer == conflict.A);
-                var bView = _layers.FirstOrDefault(l => l.Layer == conflict.B);
+                var aView = Layers.FirstOrDefault(l => l.Layer == conflict.A);
+                var bView = Layers.FirstOrDefault(l => l.Layer == conflict.B);
 
                 if (aView == null || bView == null) continue;
 
