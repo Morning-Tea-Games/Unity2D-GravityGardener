@@ -1,6 +1,3 @@
-// 4. Сделать через выбор первой планеты ко второй
-// 1. Подогнать размер планет под референс
-
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,7 +7,6 @@ namespace Planets
     public class Planet : MonoBehaviour
     {
         [field: SerializeField] public List<LayerView> Layers { get; private set; }
-
         [SerializeField] private List<PlanetLayerConflictSO> _conflicts;
         [SerializeField] private PlanetSizeSO _maxSizes;
 
@@ -23,13 +19,15 @@ namespace Planets
 
         public void Add(List<LayerView> layers, Vector3 sizeRatio)
         {
-            for(int i = 0; i < Layers.Count; i++)
+            for (int i = 0; i < Layers.Count; i++)
             {
-                if (Layers[i].CurrentIntensity == LayerIntensity.None && layers[i].CurrentIntensity == LayerIntensity.None) continue;
-                Layers[i].Activate(Layers[i].CurrentIntensity + (int)layers[i].CurrentIntensity);
+                int a = (int)Layers[i].CurrentIntensity;
+                int b = (int)layers[i].CurrentIntensity;
+                int sum = Mathf.Clamp(a + b, 0, (int)LayerIntensity.High);
+                Layers[i].Activate((LayerIntensity)sum);
             }
 
-            transform.localScale += sizeRatio;
+            transform.localScale += sizeRatio / transform.localScale.y;
             FixConflict();
             DefineType();
         }
@@ -43,24 +41,24 @@ namespace Planets
 
                 if (aView == null || bView == null) continue;
 
-                var aIntensity = (int)aView.CurrentIntensity;
-                var bIntensity = (int)bView.CurrentIntensity;
+                int a = (int)aView.CurrentIntensity;
+                int b = (int)bView.CurrentIntensity;
 
-                if (aIntensity == 0 || bIntensity == 0) continue;
+                if (a == 0 || b == 0) continue;
 
-                if (aIntensity == bIntensity)
+                if (a == b)
                 {
                     aView.Activate(LayerIntensity.None);
                     bView.Activate(LayerIntensity.None);
                 }
-                else if (aIntensity > bIntensity)
+                else if (a > b)
                 {
-                    aView.Activate((LayerIntensity)(aIntensity - bIntensity));
+                    aView.Activate((LayerIntensity)(a - b));
                     bView.Activate(LayerIntensity.None);
                 }
                 else
                 {
-                    bView.Activate((LayerIntensity)(bIntensity - aIntensity));
+                    bView.Activate((LayerIntensity)(b - a));
                     aView.Activate(LayerIntensity.None);
                 }
             }
@@ -68,20 +66,18 @@ namespace Planets
 
         private void DefineType()
         {
-            var size = transform.localScale.y;
+            float size = transform.localScale.y;
 
             for (int i = 0; i < _maxSizes.Configuration.Length; i++)
             {
-                if (size > _maxSizes.Configuration[i].MaxSize)
+                if (size <= _maxSizes.Configuration[i].MaxSize)
                 {
-                    continue;
+                    _currentType = _maxSizes.Configuration[i].Type;
+                    return;
                 }
-
-                _currentType = _maxSizes.Configuration[i].Type;
-                return;
             }
 
-            throw new System.Exception($"There was no planet with the right size");
+            throw new System.Exception("No valid planet type");
         }
     }
 }

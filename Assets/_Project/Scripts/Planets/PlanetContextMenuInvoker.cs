@@ -5,12 +5,15 @@ namespace Planets
 {
     public class PlanetContextMenuInvoker : MonoBehaviour
     {
-        [SerializeField] private GameObject _contextMenuObject;
         [SerializeField] private Planet _main;
-        [SerializeField] private PlanetContextMenu _menu;
         [SerializeField] private PlanetConnector _connector;
 
-        private void Awake() => _contextMenuObject.SetActive(false);
+        private PlanetContextMenu _menu;
+
+        private void Start()
+        {
+            _menu = PlanetContextMenu.Instance;
+        }
 
         private Planet GetClickedPlanet()
         {
@@ -36,8 +39,8 @@ namespace Planets
                 if (clickedPlanet == _main)
                 {
                     _menu.SetTarget(_main);
-                    _contextMenuObject.transform.position = _main.transform.position;
-                    _contextMenuObject.SetActive(true);
+                    _menu.transform.position = _main.transform.position;
+                    _menu.gameObject.SetActive(true);
 
                     if (PlanetBuffer.Instance.PlanetA == null && !_menu.WaitingConnect)
                     {
@@ -63,7 +66,7 @@ namespace Planets
                 else
                 {
                     _menu.SetActiveCompositButton(true);
-                    _contextMenuObject.SetActive(false);
+                    _menu.gameObject.SetActive(false);
                     PlanetBuffer.Instance.SetA(null);
                     PlanetBuffer.Instance.SetB(null);
                     _menu.WaitingConnect = false;

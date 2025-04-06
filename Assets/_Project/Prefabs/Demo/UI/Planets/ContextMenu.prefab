@@ -738,12 +738,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7882ad20a6e554a48bfb596896147a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaitingConnect: 0
   _informationButton: {fileID: 3790602385360936404}
   _moveButton: {fileID: 4121849454704131985}
   _compositButton: {fileID: 7235733387329686999}
   _destroyButton: {fileID: 2672526848608002810}
-  _planet: {fileID: 0}
-  _connector: {fileID: 0}
+  _canvas: {fileID: 3893202506067518195}
 --- !u!1 &6227951050300230004
 GameObject:
   m_ObjectHideFlags: 0
