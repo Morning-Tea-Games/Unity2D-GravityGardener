@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 409970887}
   - component: {fileID: 409970888}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: '-'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 653213506}
   - component: {fileID: 653213509}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 818934511}
   - component: {fileID: 818934510}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 1438444237}
   - component: {fileID: 1438444236}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Authors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 2081402286}
   - component: {fileID: 2081402285}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: '-'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

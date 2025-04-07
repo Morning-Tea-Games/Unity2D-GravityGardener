@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 167033029}
   - component: {fileID: 167033030}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Comics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 216101792}
   - component: {fileID: 216101791}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Comics 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 597563970}
   - component: {fileID: 597563969}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Comics 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 895442596}
   - component: {fileID: 895442595}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Comics 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 952933764}
   - component: {fileID: 952933763}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: '-'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 1190790579}
   - component: {fileID: 1190790578}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Comics 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 1770145344}
   - component: {fileID: 1770145343}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Comics 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 1975209343}
   - component: {fileID: 1975209342}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Comics 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 1999204245}
   - component: {fileID: 1999204244}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Comics 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

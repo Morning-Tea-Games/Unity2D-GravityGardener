@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 670731925}
   - component: {fileID: 670731926}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 670731924}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 575.4002, y: 438.5058, z: -9711.61}
+  m_LocalPosition: {x: 570, y: 438.5058, z: -9711.61}
   m_LocalScale: {x: 108.000015, y: 108.000015, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 680899575}
   - component: {fileID: 680899576}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Music Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 793734162}
   - component: {fileID: 793734161}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 1149866311}
   - component: {fileID: 1149866310}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: '-'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1302,7 +1302,7 @@ GameObject:
   - component: {fileID: 1405877937}
   - component: {fileID: 1405877938}
   m_Layer: 5
-  m_Name: Slider_1
+  m_Name: Sound Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
