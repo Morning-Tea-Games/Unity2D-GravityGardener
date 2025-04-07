@@ -566,7 +566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1
+  m_text: '3
 
 
 
@@ -576,7 +576,7 @@ MonoBehaviour:
 
 
 
-    3'
+    1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 585edce0f0f05fc4aa143156ff2fee8d, type: 2}
   m_sharedMaterial: {fileID: -3464444294816613828, guid: 585edce0f0f05fc4aa143156ff2fee8d, type: 2}
@@ -851,6 +851,7 @@ Transform:
   m_Children:
   - {fileID: 1524272361}
   - {fileID: 1470963325}
+  - {fileID: 1534662138}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1448092212
@@ -871,6 +872,7 @@ MonoBehaviour:
   autoInjectGameObjects: []
   _contextMenu: {fileID: 1954724667}
   _rules: {fileID: 11400000, guid: 872f757d04d0d1c499b9dad3211d403e, type: 2}
+  _planetManager: {fileID: 1534662139}
 --- !u!1 &1470963322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1213,59 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1534662137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534662138}
+  - component: {fileID: 1534662139}
+  m_Layer: 0
+  m_Name: PlanetSystemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1534662138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534662137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1448092211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1534662139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534662137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ae67f76ab007c4b950f15f8871f78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 1232500488}
+  _layerMasks:
+  - serializedVersion: 2
+    m_Bits: 64
+  - serializedVersion: 2
+    m_Bits: 128
+  - serializedVersion: 2
+    m_Bits: 256
+  _transparency: 0.05
 --- !u!1 &1577635061
 GameObject:
   m_ObjectHideFlags: 0

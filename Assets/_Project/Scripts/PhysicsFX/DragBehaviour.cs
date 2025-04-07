@@ -7,6 +7,8 @@ namespace PhysicsFX
 {
     public class DragBehaviour : MonoBehaviour
     {
+        public bool IsActive = true;
+
         [SerializeField] private Rigidbody2D _rigidbody;
         
         private GameRules _rules;
@@ -28,6 +30,11 @@ namespace PhysicsFX
 
         private void OnMouseDown()
         {
+            if (!IsActive)
+            {
+                return;
+            }
+            
             _rigidbody.drag = 0f;
             _rigidbody.velocity = Vector2.zero;
 
@@ -39,6 +46,11 @@ namespace PhysicsFX
 
         private void OnMouseDrag()
         {
+            if (!IsActive)
+            {
+                return;
+            }
+            
             Vector3 mouseWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
             mouseWorld.z = 0f;
 

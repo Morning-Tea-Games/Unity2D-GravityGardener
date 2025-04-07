@@ -19,6 +19,5 @@ namespace Core
         [field: SerializeField] public float MaxGeneratedSize { get; private set; }
         [field: SerializeField] public PlanetBehaviour PlanetPrefab { get; private set; }
         [field: SerializeField] public PlanetLayerSO[] EnabledLayers { get; private set; }
-
     }
 }

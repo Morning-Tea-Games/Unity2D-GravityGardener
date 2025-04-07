@@ -10,6 +10,9 @@ namespace Planets
     {
         [field: SerializeField] public List<PlanetLayerBehaviour> Layers { get; private set; }
         [field: SerializeField] public PlanetType CurrentType { get; private set; }
+        [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
+        [field: SerializeField] public int PlanetSystemLayer { get; private set; }
+
 
         private PlanetTypeIdentifier _identifier;
 
@@ -25,7 +28,7 @@ namespace Planets
             container.Inject(this);
         }
 
-        private void Update()
+        public void DefineType()
         {
             if (_identifier.TryDefine(this, out var type))
             {
@@ -35,6 +38,11 @@ namespace Planets
             {
                 Destroy(gameObject);
             }
+        }
+
+        public void SetPlanetSystemLayer(int layer)
+        {
+            PlanetSystemLayer = layer;
         }
     }
 }

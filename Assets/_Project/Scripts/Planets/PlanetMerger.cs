@@ -18,6 +18,11 @@ namespace Planets
 
         public void Merge(PlanetBehaviour a, PlanetBehaviour b)
         {
+            if (a.gameObject.layer != b.gameObject.layer)
+            {
+                return;
+            }
+            
             for (int i = 0; i < b.Layers.Count; i++)
             {
                 var newIntensity = (int)b.Layers[i].CurrentIntensity + (int)a.Layers[i].CurrentIntensity;
@@ -43,6 +48,7 @@ namespace Planets
             }
 
             b.transform.localScale = totalScale;
+            b.DefineType();
             Object.Destroy(a.gameObject);
         }
     }
