@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d0e7f22fad0aa4eb347415f123b06b, type: 3}
+  m_Name: GrassLow
+  m_EditorClassIdentifier: 
+  <Sprites>k__BackingField:
+  - {fileID: 21300000, guid: eecc3d15e50b47b45861e3ed240d0ec6, type: 3}
+  - {fileID: 21300000, guid: 447b33287a75ffe42ae4594d010a3635, type: 3}
+  - {fileID: 21300000, guid: 37728a6c479844e40b4a5f6d49eb1d0b, type: 3}

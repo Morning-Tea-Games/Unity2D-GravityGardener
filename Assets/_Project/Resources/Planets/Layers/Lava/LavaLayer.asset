@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6cacc7a1809bf418ab1b310f09fee6, type: 3}
+  m_Name: LavaLayer
+  m_EditorClassIdentifier: 
+  <Variations>k__BackingField:
+  - {fileID: 11400000, guid: 3323e9068d4f69a47854f3b1e11b5acd, type: 2}
+  - {fileID: 11400000, guid: e87ad212dcda0854ba18292b255fb9f7, type: 2}
+  - {fileID: 11400000, guid: 05f4b7bac0159dd4d99beba5b434a55c, type: 2}
+  - {fileID: 11400000, guid: 66b6bb5e1787cd84c928a0bac1fdfbe9, type: 2}
