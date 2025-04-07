@@ -168,7 +168,7 @@ MonoBehaviour:
   - {fileID: 3231418758969865638}
   - {fileID: 4048552299311509248}
   <CurrentType>k__BackingField: 0
-  <SpriteRenderer>k__BackingField: {fileID: 0}
+  <SpriteRenderer>k__BackingField: {fileID: 8360624000414186194}
   <PlanetSystemLayer>k__BackingField: 0
 --- !u!114 &5793323973195090233
 MonoBehaviour:
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9287d2d38ca09149b2c9f96a8b583e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsActive: 1
   _rigidbody: {fileID: -3467065538381496698}
 --- !u!1 &2872461848286120839
 GameObject:

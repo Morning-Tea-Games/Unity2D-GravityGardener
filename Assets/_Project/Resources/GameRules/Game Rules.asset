@@ -18,16 +18,22 @@ MonoBehaviour:
   <MaxPlanetLayerIntensity>k__BackingField: 3
   <PlanetSizes>k__BackingField:
   - <Type>k__BackingField: 0
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 498d4c13e8ddb3a449e915df816e95aa, type: 3}
     <MaxSize>k__BackingField: 0.55
   - <Type>k__BackingField: 1
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 498d4c13e8ddb3a449e915df816e95aa, type: 3}
     <MaxSize>k__BackingField: 0.96
   - <Type>k__BackingField: 2
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 498d4c13e8ddb3a449e915df816e95aa, type: 3}
     <MaxSize>k__BackingField: 1.86
   - <Type>k__BackingField: 3
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 498d4c13e8ddb3a449e915df816e95aa, type: 3}
     <MaxSize>k__BackingField: 2.56
   - <Type>k__BackingField: 4
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 498d4c13e8ddb3a449e915df816e95aa, type: 3}
     <MaxSize>k__BackingField: 3.66
   - <Type>k__BackingField: 5
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 498d4c13e8ddb3a449e915df816e95aa, type: 3}
     <MaxSize>k__BackingField: 5.01
   <PlanetLayerConflicts>k__BackingField: []
   <MinGeneratedPlanetSize>k__BackingField: 0.5

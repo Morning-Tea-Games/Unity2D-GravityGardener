@@ -13,7 +13,6 @@ namespace Planets
         [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
         [field: SerializeField] public int PlanetSystemLayer { get; private set; }
 
-
         private PlanetTypeIdentifier _identifier;
 
         [Inject]
