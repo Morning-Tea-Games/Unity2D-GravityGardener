@@ -27,6 +27,7 @@
 # IDE cache directory
 .vs/
 .vscode/
+.vsconfig/
 .idea/
 .cursor/
 .editorconfig
