@@ -1,19 +1,29 @@
+using Core;
 using UnityEngine;
+using VContainer;
+using VContainer.Unity;
 
-namespace Planets
+namespace PhysicsFX
 {
-    public class GrabbableObject : MonoBehaviour
+    public class DragBehaviour : MonoBehaviour
     {
-        [SerializeField] private float _releaseDrag;
         [SerializeField] private Rigidbody2D _rigidbody;
-
+        
+        private GameRules _rules;
         private Camera _camera;
         private Vector3 _offset;
 
+        [Inject]
+        public void Construct(GameRules rules)
+        {
+            _rules = rules;
+            _camera = Camera.main;
+        }
+
         private void Awake()
         {
-            _camera = Camera.main;
-            _rigidbody.gravityScale = 0f;
+            var container = LifetimeScope.Find<PlanetLifetimeScope>().Container;
+            container.Inject(this);
         }
 
         private void OnMouseDown()
@@ -40,7 +50,7 @@ namespace Planets
 
         private void OnMouseUp()
         {
-            _rigidbody.drag = _releaseDrag;
+            _rigidbody.drag = _rules.PlanetDrag;
         }
     }
 }

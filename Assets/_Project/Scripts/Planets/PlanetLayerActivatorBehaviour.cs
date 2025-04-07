@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 namespace Planets
 {
-    public class LayerActivator : MonoBehaviour
+    public class PlanetLayerActivatorBehaviour : MonoBehaviour
     {
         [SerializeField] private Button _button;
-        [SerializeField] private LayerView _target;
-        [SerializeField] private LayerIntensity _intensity;
+        [SerializeField] private PlanetLayerBehaviour _target;
+        [SerializeField] private PlanetLayerIntensity _intensity;
 
         private void OnEnable()
         {
@@ -21,7 +21,7 @@ namespace Planets
 
         private void OnClick()
         {
-            _target.Activate(_intensity);
+            _target.Show(_intensity);
         }
     }
 }

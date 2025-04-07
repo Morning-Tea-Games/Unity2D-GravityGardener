@@ -1,6 +1,6 @@
 namespace Planets
 {
-    public enum LayerIntensity
+    public enum PlanetLayerIntensity
     {
         None = 0,
         Low = 1,

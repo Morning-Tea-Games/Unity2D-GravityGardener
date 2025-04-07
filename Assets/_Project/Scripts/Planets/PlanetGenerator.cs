@@ -1,45 +1,46 @@
-using System.Collections.Generic;
+using Core;
 using UnityEngine;
-using UnityEngine.UI;
+using VContainer;
 
 namespace Planets
 {
-    public class PlanetGenerator : MonoBehaviour
+    public class PlanetGenerator
     {
-        [SerializeField] private Planet _prefab;
-        [SerializeField] private List<PlanetLayerSO> _enabledLayers;
-        [SerializeField] private Button _generateButton;
-        [SerializeField] private float _randomSize;
+        private readonly PlanetLayerConflictResolver _conflictResolver;
+        private readonly GameRules _rules;
 
-        private void OnEnable()
+        [Inject]
+        public PlanetGenerator(PlanetLayerConflictResolver conflictResolver, GameRules rules)
         {
-            _generateButton.onClick.AddListener(GenerateButton);
+            _conflictResolver = conflictResolver;
+            _rules = rules;
         }
 
-        private void OnDisable()
+        public PlanetBehaviour Generate()
         {
-            _generateButton.onClick.RemoveListener(GenerateButton);
-        }
+            var planet = Object.Instantiate(_rules.PlanetPrefab);
 
-        private void GenerateButton()
-        {
-            Generate();
-        }
-
-        public Planet Generate()
-        {
-            var instance = Instantiate(_prefab.gameObject).GetComponent<Planet>();
-            var layers = _prefab.Layers;
-
-            for (int i = 0; i < layers.Count; i++)
+            for (int i = 0; i < _rules.EnabledLayers.Length; i++)
             {
-                layers[i].Activate((LayerIntensity)Random.Range((int)LayerIntensity.None, (int)LayerIntensity.High + 1));
+                planet.Layers[i].Show((PlanetLayerIntensity)Random.Range(
+                    (int)_rules.MinPlanetLayerIntensity,
+                    (int)_rules.MaxPlanetLayerIntensity
+                    ));
             }
 
-            var size = Random.Range(0f, _randomSize);
-            instance.Add(layers, Vector3.zero + new Vector3(size, size, size));
+            _conflictResolver.Resolve(planet.Layers);
 
-            return instance;
+            float size = Random.Range(_rules.MinGeneratedPlanetSize, _rules.MaxGeneratedSize);
+            planet.transform.localScale = Vector3.one * size;
+
+            try
+            {
+                return planet;
+            }
+            finally
+            {
+                Object.Destroy(planet.gameObject);
+            }
         }
     }
 }
