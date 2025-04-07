@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b4234f9d5b0b44b204908bf2c0e1e, type: 3}
   m_Name: Game Rules
   m_EditorClassIdentifier: 
-  <PlanetDrag>k__BackingField: 10
+  <PlanetDrag>k__BackingField: 7.5
   <PlanetSizeProgressionModificator>k__BackingField: 0.25
   <MinPlanetLayerIntensity>k__BackingField: 0
   <MaxPlanetLayerIntensity>k__BackingField: 3
@@ -29,11 +29,10 @@ MonoBehaviour:
     <MaxSize>k__BackingField: 3.66
   - <Type>k__BackingField: 5
     <MaxSize>k__BackingField: 5.01
-  <PlanetLayerConflicts>k__BackingField:
-  - {fileID: 11400000, guid: 38720f8b35bc7a8479eb26563303c147, type: 2}
+  <PlanetLayerConflicts>k__BackingField: []
   <MinGeneratedPlanetSize>k__BackingField: 0.5
   <MaxGeneratedSize>k__BackingField: 1.5
   <PlanetPrefab>k__BackingField: {fileID: 6121233656237827702, guid: 776632fc95f34c0438dd6ffb78bd711f, type: 3}
   <EnabledLayers>k__BackingField:
-  - {fileID: 11400000, guid: 2c29ef46bb9b21d448c07182dd7118af, type: 2}
-  - {fileID: 11400000, guid: 80ba0fa0d2bca454a986f7bef942b1e6, type: 2}
+  - {fileID: 11400000, guid: f3421f8b37a27884c8968b0a513cdd02, type: 2}
+  - {fileID: 11400000, guid: 179a2b1d2eaae6e4c82c68e1ad47ec8f, type: 2}
