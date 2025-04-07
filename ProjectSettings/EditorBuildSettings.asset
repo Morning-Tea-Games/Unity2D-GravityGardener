@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Tutorial.unity
     guid: c1fe98a7682bc1842aa242b2aebdd755
+  - enabled: 1
+    path: Assets/_Project/Scenes/Lets Go.unity
+    guid: ca28dc569b4efc649ab1641cea0f033f
   m_configObjects: {}
