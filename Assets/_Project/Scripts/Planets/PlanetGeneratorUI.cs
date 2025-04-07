@@ -10,13 +10,16 @@ namespace Planets
     {
         [SerializeField] private Button _generateButton;
         [SerializeField] private Transform _parent;
+        
+        private PlanetSystemManagerBehaviour _planetManager;
 
         private PlanetGenerator _generator;
 
         [Inject]
-        public void Construct(PlanetGenerator generator)
+        public void Construct(PlanetGenerator generator, PlanetSystemManagerBehaviour planetManager)
         {
             _generator = generator;
+            _planetManager = planetManager;
         }
 
         private void Awake()
@@ -38,10 +41,11 @@ namespace Planets
         private void GeneratePlanet()
         {
             var planet = Instantiate(_generator.Generate(), _parent.position, Quaternion.identity, _parent);
-            planet.GetComponent<CircleCollider2D>().enabled = true;
+            planet.GetComponent<CircleCollider2D>().enabled = true; // TODO: разобраться с аномалией выключения компонентов при спавне
             planet.GetComponent<PlanetContextMenuInvokerBehaviour>().enabled = true;
             planet.GetComponent<PlanetBehaviour>().enabled = true;
             planet.gameObject.SetActive(true);
+            _planetManager.Add(planet);
         }
     }
 }

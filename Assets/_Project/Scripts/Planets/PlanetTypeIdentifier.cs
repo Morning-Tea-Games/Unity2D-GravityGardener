@@ -20,6 +20,7 @@ namespace Planets
                 if (size <= _rules.PlanetSizes[i].MaxSize)
                 {
                     type = _rules.PlanetSizes[i].Type;
+                    target.SpriteRenderer.sprite = _rules.PlanetSizes[i].BaseSprite;
                     return true;
                 }
             }

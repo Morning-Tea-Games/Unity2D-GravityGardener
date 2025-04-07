@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: WaterHigh
   m_EditorClassIdentifier: 
   <Sprites>k__BackingField:
-  - {fileID: 21300000, guid: 5f6a3e0020538094a97362f499d21200, type: 3}
+  - {fileID: 21300000, guid: 93a86043297cb644993db4e61f657d03, type: 3}
+  - {fileID: 21300000, guid: cc4fd28a6da2ecb40a5978e70ff688df, type: 3}
+  - {fileID: 21300000, guid: 3d4438dcefbf4214aad18edc0eb34d9f, type: 3}

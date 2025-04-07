@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: LavaLow
   m_EditorClassIdentifier: 
   <Sprites>k__BackingField:
-  - {fileID: 21300000, guid: 1b102ad2e593b0c4f9a91e7758e7c9f4, type: 3}
+  - {fileID: 21300000, guid: 707483a9d33fc0242834ac37ea37fb36, type: 3}
+  - {fileID: 21300000, guid: aa59f3a5ddce5e34b83bc804cb1c29ce, type: 3}
+  - {fileID: 21300000, guid: d04db33a4292595448abe5370192227d, type: 3}

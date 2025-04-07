@@ -18,21 +18,66 @@ MonoBehaviour:
   <MaxPlanetLayerIntensity>k__BackingField: 3
   <PlanetSizes>k__BackingField:
   - <Type>k__BackingField: 0
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: e783a33aedcee724b8cbe795e085509e, type: 3}
     <MaxSize>k__BackingField: 0.55
   - <Type>k__BackingField: 1
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: fbb455efef78e3d44b7d6d701f8b7e74, type: 3}
     <MaxSize>k__BackingField: 0.96
   - <Type>k__BackingField: 2
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 19a0509703a42ed43b61a97c5b8e1dcf, type: 3}
     <MaxSize>k__BackingField: 1.86
   - <Type>k__BackingField: 3
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: adab9182c55a4e04a8058e1b1961c551, type: 3}
     <MaxSize>k__BackingField: 2.56
   - <Type>k__BackingField: 4
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 8184663986e7743478463accc45abeb7, type: 3}
     <MaxSize>k__BackingField: 3.66
   - <Type>k__BackingField: 5
+    <BaseSprite>k__BackingField: {fileID: 21300000, guid: 9bbaa9e4051e75b42804851fc4bcb267, type: 3}
     <MaxSize>k__BackingField: 5.01
-  <PlanetLayerConflicts>k__BackingField: []
+  <PlanetLayerConflicts>k__BackingField:
+  - {fileID: 11400000, guid: 10198deb500e5a548980b1b4c573f693, type: 2}
+  - {fileID: 11400000, guid: 49a1b189837627341a4034953140e64d, type: 2}
+  - {fileID: 11400000, guid: 6d3fd7e6d403ba247a533e7237114be5, type: 2}
+  - {fileID: 11400000, guid: f2517f4a6f85dc741af4dc9a9dd4db96, type: 2}
+  - {fileID: 11400000, guid: 595e809527fa37e45bc1936e7ae8a4ea, type: 2}
+  - {fileID: 11400000, guid: 5043f7ae702e07a4bbc3be6dfd1dd424, type: 2}
+  - {fileID: 11400000, guid: 38720f8b35bc7a8479eb26563303c147, type: 2}
   <MinGeneratedPlanetSize>k__BackingField: 0.5
   <MaxGeneratedSize>k__BackingField: 1.5
   <PlanetPrefab>k__BackingField: {fileID: 6121233656237827702, guid: 776632fc95f34c0438dd6ffb78bd711f, type: 3}
   <EnabledLayers>k__BackingField:
+  - {fileID: 11400000, guid: 774ed405e8cedb54ab74f85ce6ff57aa, type: 2}
   - {fileID: 11400000, guid: f3421f8b37a27884c8968b0a513cdd02, type: 2}
-  - {fileID: 11400000, guid: 179a2b1d2eaae6e4c82c68e1ad47ec8f, type: 2}
+  - {fileID: 11400000, guid: 80ba0fa0d2bca454a986f7bef942b1e6, type: 2}
+  - {fileID: 11400000, guid: 2c29ef46bb9b21d448c07182dd7118af, type: 2}
+  <DisabledForComet>k__BackingField:
+  - {fileID: 11400000, guid: 7eb183160c6ae4847ad78515208ff983, type: 2}
+  - {fileID: 11400000, guid: a7771cb6380f51541a4a0174dde6cee2, type: 2}
+  - {fileID: 11400000, guid: f3421f8b37a27884c8968b0a513cdd02, type: 2}
+  - {fileID: 11400000, guid: 7eb183160c6ae4847ad78515208ff983, type: 2}
+  <DisabledForSatellite>k__BackingField: []
+  <DisabledForPlanet>k__BackingField: []
+  <DisabledForGasGigant>k__BackingField:
+  - {fileID: 11400000, guid: 80ba0fa0d2bca454a986f7bef942b1e6, type: 2}
+  - {fileID: 11400000, guid: 2c29ef46bb9b21d448c07182dd7118af, type: 2}
+  - {fileID: 11400000, guid: 774ed405e8cedb54ab74f85ce6ff57aa, type: 2}
+  - {fileID: 11400000, guid: f3421f8b37a27884c8968b0a513cdd02, type: 2}
+  <DisabledForStar>k__BackingField:
+  - {fileID: 11400000, guid: 584a84dfd73e2d54c8d99b7ea008dfd6, type: 2}
+  - {fileID: 11400000, guid: a7771cb6380f51541a4a0174dde6cee2, type: 2}
+  - {fileID: 11400000, guid: 06f76f5644f0d6a468dd78c49a578386, type: 2}
+  - {fileID: 11400000, guid: 9bc4558aedeff1e41b46b3728273e1c4, type: 2}
+  - {fileID: 11400000, guid: 80ba0fa0d2bca454a986f7bef942b1e6, type: 2}
+  - {fileID: 11400000, guid: 2c29ef46bb9b21d448c07182dd7118af, type: 2}
+  - {fileID: 11400000, guid: 774ed405e8cedb54ab74f85ce6ff57aa, type: 2}
+  - {fileID: 11400000, guid: f3421f8b37a27884c8968b0a513cdd02, type: 2}
+  <DisabledForBlackHole>k__BackingField:
+  - {fileID: 11400000, guid: a6fc56f9dd07e6c4c95594945f5e5d28, type: 2}
+  - {fileID: 11400000, guid: 80ba0fa0d2bca454a986f7bef942b1e6, type: 2}
+  - {fileID: 11400000, guid: 2c29ef46bb9b21d448c07182dd7118af, type: 2}
+  - {fileID: 11400000, guid: 774ed405e8cedb54ab74f85ce6ff57aa, type: 2}
+  - {fileID: 11400000, guid: f3421f8b37a27884c8968b0a513cdd02, type: 2}
+  - {fileID: 11400000, guid: 584a84dfd73e2d54c8d99b7ea008dfd6, type: 2}
+  - {fileID: 11400000, guid: 06f76f5644f0d6a468dd78c49a578386, type: 2}
+  - {fileID: 11400000, guid: 9bc4558aedeff1e41b46b3728273e1c4, type: 2}

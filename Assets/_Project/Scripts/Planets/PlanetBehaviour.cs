@@ -3,6 +3,7 @@ using Core;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
+using VFX;
 
 namespace Planets
 {
@@ -10,13 +11,17 @@ namespace Planets
     {
         [field: SerializeField] public List<PlanetLayerBehaviour> Layers { get; private set; }
         [field: SerializeField] public PlanetType CurrentType { get; private set; }
+        [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
+        [field: SerializeField] public int PlanetSystemLayer { get; private set; }
 
         private PlanetTypeIdentifier _identifier;
+        private NebulaBehaviour _nebula;
 
         [Inject]
-        public void Construct(PlanetTypeIdentifier identifier)
+        public void Construct(PlanetTypeIdentifier identifier, NebulaBehaviour nebula)
         {
             _identifier = identifier;
+            _nebula = nebula;
         }
 
         private void Awake()
@@ -25,7 +30,7 @@ namespace Planets
             container.Inject(this);
         }
 
-        private void Update()
+        public void DefineType()
         {
             if (_identifier.TryDefine(this, out var type))
             {
@@ -34,7 +39,13 @@ namespace Planets
             else
             {
                 Destroy(gameObject);
+                _nebula.Change();
             }
+        }
+
+        public void SetPlanetSystemLayer(int layer)
+        {
+            PlanetSystemLayer = layer;
         }
     }
 }

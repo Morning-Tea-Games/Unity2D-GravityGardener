@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d0e7f22fad0aa4eb347415f123b06b, type: 3}
+  m_Name: FosgenMedium
+  m_EditorClassIdentifier: 
+  <Sprites>k__BackingField:
+  - {fileID: 21300000, guid: e901135960711114ebd17cf23d282943, type: 3}
+  - {fileID: 21300000, guid: ac8b9809700900448810c55935390319, type: 3}
+  - {fileID: 21300000, guid: 8e47d23cd05dbad40a05a008e2426c7f, type: 3}

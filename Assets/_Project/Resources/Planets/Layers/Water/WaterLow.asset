@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: WaterLow
   m_EditorClassIdentifier: 
   <Sprites>k__BackingField:
-  - {fileID: 21300000, guid: 8a66036ae08658048851baacc56b4f19, type: 3}
+  - {fileID: 21300000, guid: c4c49a7701987534f89c9699c657a0ea, type: 3}
+  - {fileID: 21300000, guid: 1390458cdda44794795405e90906dcce, type: 3}
+  - {fileID: 21300000, guid: 5506ee30eb9f6224a92c6955fde338ff, type: 3}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d0e7f22fad0aa4eb347415f123b06b, type: 3}
+  m_Name: SunLow
+  m_EditorClassIdentifier: 
+  <Sprites>k__BackingField:
+  - {fileID: 21300000, guid: 6657f2f6043d0fb49b09d8ca2ed667fb, type: 3}
+  - {fileID: 21300000, guid: c08cc4f09cbfcee4cb269ad73dd49272, type: 3}
+  - {fileID: 21300000, guid: ae4671dbb1c83104fa49c2138f870b58, type: 3}
