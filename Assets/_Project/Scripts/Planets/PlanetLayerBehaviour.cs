@@ -28,6 +28,7 @@ namespace Planets
 
         public void Show(PlanetLayerIntensity intensity)
         {
+            // TODO: Из-за такой системы приходится всегда делать по 4 элемента, иначе ошибка
             var layer = Layer.Variations[Mathf.Clamp(
                 (int)intensity,
                 (int)_rules.MinPlanetLayerIntensity,
