@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: WaterMedium
   m_EditorClassIdentifier: 
   <Sprites>k__BackingField:
-  - {fileID: 21300000, guid: 981cfa48fb83c8c4296014d2ed50db3e, type: 3}
+  - {fileID: 21300000, guid: d15dad6d2c8b5794ebdfe2014b80e3c5, type: 3}
+  - {fileID: 21300000, guid: 053e98f4f3976b54ba145e4ecff932d0, type: 3}
+  - {fileID: 21300000, guid: ab970db6d382d15488d8c50b717327fe, type: 3}

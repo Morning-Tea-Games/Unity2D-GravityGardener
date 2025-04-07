@@ -10,18 +10,10 @@ namespace PhysicsFX
 
         private BoxCollider2D[] borders = new BoxCollider2D[4]; // Left, Right, Top, Bottom
 
-        private void OnEnable()
+        private void Start()
         {
             CreateOrAssignColliders();
             UpdateColliders();
-        }
-
-        private void Update()
-        {
-    #if UNITY_EDITOR
-            if (!Application.isPlaying)
-                UpdateColliders();
-    #endif
         }
 
         private void CreateOrAssignColliders()

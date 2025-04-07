@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38d0e7f22fad0aa4eb347415f123b06b, type: 3}
-  m_Name: LavaLow
+  m_Name: GasWaterMedium
   m_EditorClassIdentifier: 
   <Sprites>k__BackingField:
-  - {fileID: 21300000, guid: 707483a9d33fc0242834ac37ea37fb36, type: 3}
-  - {fileID: 21300000, guid: aa59f3a5ddce5e34b83bc804cb1c29ce, type: 3}
-  - {fileID: 21300000, guid: d04db33a4292595448abe5370192227d, type: 3}
+  - {fileID: 21300000, guid: 62f52a5bfd3c3ed459a30dfc07e38645, type: 3}
+  - {fileID: 21300000, guid: 5617bcd997f60da40ac41efe067f1ef0, type: 3}
+  - {fileID: 21300000, guid: d24c92f7960570941b40b3d0bba67197, type: 3}

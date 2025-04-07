@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38d0e7f22fad0aa4eb347415f123b06b, type: 3}
-  m_Name: LavaLow
+  m_Name: SunLow
   m_EditorClassIdentifier: 
   <Sprites>k__BackingField:
-  - {fileID: 21300000, guid: 707483a9d33fc0242834ac37ea37fb36, type: 3}
-  - {fileID: 21300000, guid: aa59f3a5ddce5e34b83bc804cb1c29ce, type: 3}
-  - {fileID: 21300000, guid: d04db33a4292595448abe5370192227d, type: 3}
+  - {fileID: 21300000, guid: 6657f2f6043d0fb49b09d8ca2ed667fb, type: 3}
+  - {fileID: 21300000, guid: c08cc4f09cbfcee4cb269ad73dd49272, type: 3}
+  - {fileID: 21300000, guid: ae4671dbb1c83104fa49c2138f870b58, type: 3}

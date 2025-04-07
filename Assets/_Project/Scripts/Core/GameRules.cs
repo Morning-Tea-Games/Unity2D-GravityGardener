@@ -19,5 +19,13 @@ namespace Core
         [field: SerializeField] public float MaxGeneratedSize { get; private set; }
         [field: SerializeField] public PlanetBehaviour PlanetPrefab { get; private set; }
         [field: SerializeField] public PlanetLayerSO[] EnabledLayers { get; private set; }
+        
+        [field: Header("Planet Layers Configuration")]
+        [field: SerializeField] public PlanetLayerSO[] DisabledForComet { get; private set; }
+        [field: SerializeField] public PlanetLayerSO[] DisabledForSatellite { get; private set; }
+        [field: SerializeField] public PlanetLayerSO[] DisabledForPlanet { get; private set; }
+        [field: SerializeField] public PlanetLayerSO[] DisabledForGasGigant { get; private set; }
+        [field: SerializeField] public PlanetLayerSO[] DisabledForStar { get; private set; }
+        [field: SerializeField] public PlanetLayerSO[] DisabledForBlackHole { get; private set; }
     }
 }

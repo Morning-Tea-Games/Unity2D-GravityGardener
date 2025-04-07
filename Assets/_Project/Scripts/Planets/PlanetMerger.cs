@@ -1,3 +1,4 @@
+using System.Linq;
 using Core;
 using UnityEngine;
 using VContainer;
@@ -22,7 +23,7 @@ namespace Planets
             {
                 return;
             }
-            
+
             for (int i = 0; i < b.Layers.Count; i++)
             {
                 var newIntensity = (int)b.Layers[i].CurrentIntensity + (int)a.Layers[i].CurrentIntensity;
@@ -49,6 +50,69 @@ namespace Planets
 
             b.transform.localScale = totalScale;
             b.DefineType();
+
+            // Проверяем тип и отключаем запрещенные слои
+            if (b.CurrentType == PlanetType.Comet)
+            {
+                for (int i = 0; i < b.Layers.Count; i++)
+                {
+                    if (_rules.DisabledForComet.Contains(b.Layers[i].Layer))
+                    {
+                        b.Layers[i].Show(PlanetLayerIntensity.None);
+                    }
+                }
+            }
+            else if (b.CurrentType == PlanetType.Satellite)
+            {
+                for (int i = 0; i < b.Layers.Count; i++)
+                {
+                    if (_rules.DisabledForSatellite.Contains(b.Layers[i].Layer))
+                    {
+                        b.Layers[i].Show(PlanetLayerIntensity.None);
+                    }
+                }
+            }
+            else if (b.CurrentType == PlanetType.Planet)
+            {
+                for (int i = 0; i < b.Layers.Count; i++)
+                {
+                    if (_rules.DisabledForPlanet.Contains(b.Layers[i].Layer))
+                    {
+                        b.Layers[i].Show(PlanetLayerIntensity.None);
+                    }
+                }
+            }
+            else if (b.CurrentType == PlanetType.GasGigant)
+            {
+                for (int i = 0; i < b.Layers.Count; i++)
+                {
+                    if (_rules.DisabledForGasGigant.Contains(b.Layers[i].Layer))
+                    {
+                        b.Layers[i].Show(PlanetLayerIntensity.None);
+                    }
+                }
+            }
+            else if (b.CurrentType == PlanetType.Star)
+            {
+                for (int i = 0; i < b.Layers.Count; i++)
+                {
+                    if (_rules.DisabledForStar.Contains(b.Layers[i].Layer))
+                    {
+                        b.Layers[i].Show(PlanetLayerIntensity.None);
+                    }
+                }
+            }
+            else if (b.CurrentType == PlanetType.BlackHole)
+            {
+                for (int i = 0; i < b.Layers.Count; i++)
+                {
+                    if (_rules.DisabledForBlackHole.Contains(b.Layers[i].Layer))
+                    {
+                        b.Layers[i].Show(PlanetLayerIntensity.None);
+                    }
+                }
+            }
+
             Object.Destroy(a.gameObject);
         }
     }

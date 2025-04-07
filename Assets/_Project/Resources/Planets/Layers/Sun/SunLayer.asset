@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6cacc7a1809bf418ab1b310f09fee6, type: 3}
+  m_Name: SunLayer
+  m_EditorClassIdentifier: 
+  <Variations>k__BackingField:
+  - {fileID: 11400000, guid: 3323e9068d4f69a47854f3b1e11b5acd, type: 2}
+  - {fileID: 11400000, guid: 8c006e51722ffe147b7799f81e96d6bd, type: 2}
+  - {fileID: 11400000, guid: 05f4b7bac0159dd4d99beba5b434a55c, type: 2}
+  - {fileID: 11400000, guid: 467471a3cc2eb3440af0afbcafb60f7d, type: 2}
